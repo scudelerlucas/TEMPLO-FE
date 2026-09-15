@@ -25,9 +25,23 @@ Qual opção eu recomendo e **por quê** (1–2 linhas). Recomendação, não su
 ## ⚠️ Riscos
 O risco de cada caminho, 1 linha cada — incluindo o risco de **não** fazer nada.
 
-## 🧭 Passo a passo (quando houver)
-Numerado, linguagem simples, **com o link direto de cada passo** (URL de produção,
-página, PR, documento, arquivo). Nunca um passo sem o link quando o link existe.
+## 🧭 Passo a passo — sempre em `!PPL` (quando houver)
+**`!PPL` = Passo a Passo de Leigo** (ordem do operador, 15/09/2026). Todo passo a passo desta
+seção sai nessa linguagem, e o cabeçalho declara: `## 🧭 Passo a passo (!PPL)`. As regras:
+1. **Um passo = uma ação**, começando pelo verbo ("Abra", "Clique", "Cole"). Duas ações = dois passos.
+2. **Onde e o quê, pelo nome real:** a tela, o botão, o campo — como aparecem para quem olha,
+   nunca "acesse a configuração" sem dizer qual.
+3. **Link direto em cada passo** (URL de produção, página, PR, documento, arquivo). Nunca um
+   passo sem o link quando o link existe.
+4. **Como se sabe que deu certo:** o passo termina dizendo o que a pessoa vê quando funcionou
+   ("aparece a mensagem verde 'Salvo'").
+5. **Zero jargão** (teste da tia de 55 anos); termo técnico inevitável vem traduzido entre
+   parênteses na primeira vez. Nada de sigla solta.
+6. **Nenhum passo supõe o que outro passo não fez:** senha, aba aberta, arquivo baixado —
+   se precisa, é um passo antes.
+7. **Antes de ação irreversível** (apagar, pagar, publicar, enviar), o passo anterior manda
+   conferir: "Antes de clicar em X, confira que Y".
+Fonte da linguagem e do comando explícito `!PPL <texto>`: skill `ppl` no hub (`.claude/skills/ppl/SKILL.md`).
 
 ---
 
@@ -70,4 +84,6 @@ ser técnico é justamente quando a tradução vale mais).
 - **Nunca pedir dados técnicos ao Lucas** (DevTools, Network, logs do navegador).
   Diagnosticar por conta própria: código, MCP, logs de servidor, banco.
 - Quando a entrega for um deploy, o passo a passo traz o **link final de produção**.
+- `!PPL <texto>` sozinho, em qualquer repo, converte um procedimento inteiro em Passo a Passo de
+  Leigo — o produto é a lista de passos. Sem alvo → 1 pergunta e para.
 - Sem preâmbulo ("Aqui está…", "Baseado em…").
