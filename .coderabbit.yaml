@@ -1,0 +1,45 @@
+# Como o CodeRabbit dispara revisão neste repositório.
+#
+# Medido em 20/09/2026 na conta scudelerlucas (últimos 30 dias): 766 revisões
+# em 315 PRs, e 558 delas (73%) barradas por limite de taxa. O padrão: 74% das
+# revisões foram re-revisão do MESMO PR e 21% aconteceram até 5 minutos depois
+# de outra revisão no mesmo PR — assinatura de agente empurrando commit atrás de
+# commit num PR aberto. O gargalo é o disparo, não o plano.
+#
+# Por isso a revisão incremental automática fica DESLIGADA: o CodeRabbit revisa
+# uma vez, quando o PR abre, e só volta quando alguém pedir com
+# "@coderabbitai review" num comentário do PR.
+
+language: "pt-BR"
+
+reviews:
+  profile: "assertive"
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  path_filters:
+    - "!**/*.lock"
+    - "!**/package-lock.json"
+    - "!**/pnpm-lock.yaml"
+    - "!**/node_modules/**"
+    - "!**/.next/**"
+    - "!**/dist/**"
+    - "!**/build/**"
+
+  auto_review:
+    enabled: true
+    drafts: false
+    # Não re-revisar a cada push — pedir com "@coderabbitai review".
+    auto_incremental_review: false
+    ignore_title_keywords:
+      - "wip"
+      - "[skip review]"
+
+chat:
+  auto_reply: true
+
+knowledge_base:
+  learnings:
+    scope: local
